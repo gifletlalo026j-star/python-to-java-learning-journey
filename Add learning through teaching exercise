@@ -1,0 +1,298 @@
+# Part 4: Mini-Project Specification
+
+# Java Task Manager
+
+## 1. Project Overview
+
+The Java Task Manager is a command-line application that allows users to manage a list of tasks.
+
+The project was created as part of my learning journey from Python to Java.
+
+The purpose of the project is to apply the Java concepts I have learned, including:
+
+* Variables and data types
+* Classes and objects
+* Constructors
+* Methods
+* Encapsulation
+* `ArrayList`
+* Loops
+* Conditional statements
+* User input
+* Exception handling
+* File input and output
+
+The application allows users to create, view, complete, and delete tasks.
+
+Tasks are saved to a text file so that they remain available when the application is closed and reopened.
+
+---
+
+# 2. Project Goals
+
+The main goals of the project are:
+
+1. Apply Java object-oriented programming concepts.
+2. Practice creating and using multiple Java classes.
+3. Learn how to manage collections using `ArrayList`.
+4. Practice handling user input and invalid input.
+5. Learn how to read and write files in Java.
+6. Build a functional command-line application.
+7. Apply Java best practices learned during the learning journey.
+8. Compare Java development patterns with my previous Python experience.
+
+---
+
+# 3. Features
+
+The application will provide the following features:
+
+### Add Task
+
+The user can create a new task by entering:
+
+* Task title
+* Task description
+
+New tasks will initially have a pending status.
+
+---
+
+### View Tasks
+
+The user can view all tasks currently stored in the application.
+
+Each task will display:
+
+* Task number
+* Task title
+* Task description
+* Completion status
+
+---
+
+### Complete Task
+
+The user can select a task and mark it as completed.
+
+The task status will change from:
+
+```text
+[Pending]
+```
+
+to:
+
+```text
+[Completed]
+```
+
+---
+
+### Delete Task
+
+The user can select a task and remove it from the task list.
+
+---
+
+### Save Tasks
+
+Tasks will be saved to a local text file.
+
+The application will automatically save changes when tasks are:
+
+* Added
+* Completed
+* Deleted
+
+---
+
+### Load Tasks
+
+When the application starts, it will check whether a saved task file exists.
+
+If the file exists, the application will load the saved tasks.
+
+This allows tasks to remain available between application sessions.
+
+---
+
+# 4. Project Components
+
+The application will be divided into three main Java classes.
+
+## `Task.java`
+
+The `Task` class represents an individual task.
+
+Responsibilities:
+
+* Store task information.
+* Store the task title.
+* Store the task description.
+* Store the completion status.
+* Mark a task as completed.
+* Provide task information to other classes.
+
+---
+
+## `TaskManager.java`
+
+The `TaskManager` class manages multiple tasks.
+
+Responsibilities:
+
+* Store tasks in an `ArrayList`.
+* Add new tasks.
+* Display tasks.
+* Complete tasks.
+* Delete tasks.
+* Save tasks to a file.
+* Load tasks from a file.
+
+---
+
+## `Main.java`
+
+The `Main` class is responsible for the user interface.
+
+Responsibilities:
+
+* Display the application menu.
+* Read user input.
+* Process user choices.
+* Call methods from `TaskManager`.
+* Handle invalid numerical input.
+* Exit the application.
+
+---
+
+# 5. Project Structure
+
+The project will use the following structure:
+
+```text
+task-manager
+│
+├── README.md
+│
+└── src
+    ├── Main.java
+    ├── Task.java
+    └── TaskManager.java
+```
+
+The application will also create:
+
+```text
+tasks.txt
+```
+
+when tasks are saved.
+
+---
+
+# 6. Java Concepts Used
+
+The project will demonstrate:
+
+## Classes
+
+The application uses multiple classes to separate responsibilities.
+
+## Objects
+
+Each individual task is represented as a `Task` object.
+
+## Encapsulation
+
+Task fields are private and accessed through methods.
+
+## Constructors
+
+The `Task` constructor initializes new task objects.
+
+## Methods
+
+Methods are used to define task and task management behavior.
+
+## Collections
+
+An `ArrayList` is used to store multiple tasks.
+
+## Exception Handling
+
+`try` and `catch` are used to handle invalid user input and file errors.
+
+## File Handling
+
+Java file I/O classes are used to save and load tasks.
+
+## Control Flow
+
+Loops and conditional statements control the application menu and task operations.
+
+---
+
+# 7. Potential Challenges
+
+As a Python developer learning Java, I may face several challenges.
+
+### Challenge 1: Java's Type System
+
+I need to remember to explicitly declare variable types.
+
+### Challenge 2: Java Syntax
+
+Java has more syntax and structure than Python.
+
+### Challenge 3: Object-Oriented Design
+
+I need to understand how to separate responsibilities between classes.
+
+### Challenge 4: Exception Handling
+
+Java requires more explicit exception handling than Python in many situations.
+
+### Challenge 5: File Handling
+
+Java file operations involve more classes and syntax than Python file operations.
+
+### Challenge 6: Naming Conventions
+
+I need to remember to use Java naming conventions such as camelCase for methods and variables.
+
+---
+
+# 8. Future Improvements
+
+Future versions of the application could include:
+
+* Task priorities
+* Task due dates
+* Task categories
+* Task search
+* Task editing
+* Unique task IDs
+* JSON-based storage
+* Database storage
+* User accounts
+* Graphical user interface
+* Automated tests
+
+---
+
+# 9. Expected Learning Outcome
+
+After completing this project, I should be able to:
+
+* Build a small Java application independently.
+* Create multiple interacting Java classes.
+* Apply object-oriented programming principles.
+* Use Java collections.
+* Handle exceptions.
+* Work with files.
+* Organize a Java project.
+* Identify differences between Python and Java programming patterns.
+
+The project will demonstrate my progress from learning Java concepts to applying them in a practical application.
